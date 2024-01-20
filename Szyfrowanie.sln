@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Szyfrowanie", "Szyfrowanie\Szyfrowanie.csproj", "{EC3B3080-5073-486D-81E3-A1FD18F768D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC3B3080-5073-486D-81E3-A1FD18F768D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC3B3080-5073-486D-81E3-A1FD18F768D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC3B3080-5073-486D-81E3-A1FD18F768D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC3B3080-5073-486D-81E3-A1FD18F768D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0AFAD73B-CE17-427A-87AD-089A90BC043B}
+	EndGlobalSection
+EndGlobal
