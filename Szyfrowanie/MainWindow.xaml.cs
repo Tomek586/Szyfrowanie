@@ -120,20 +120,38 @@ namespace Szyfrowanie
             }
         }
 
-        private int GetShiftFromUser()
+        private static int GetShiftFromUser()
         {
             int shift = 0;
+
             try
             {
                 string input = Microsoft.VisualBasic.Interaction.InputBox("Podaj przesunięcie:", "Przesunięcie Cezara", "", -1, -1);
-                shift = Convert.ToInt32(input);
+
+                // Attempt to convert the input to an integer
+                if (int.TryParse(input, out shift))
+                {
+                    // Check if the value is within the desired range
+                    if (shift < 1 || shift > 34)
+                    {
+                        MessageBox.Show("Podano liczbę spoza zakresu 1-34. Wprowadź liczbę z tego zakresu.");
+                        return GetShiftFromUser(); // Recursively call the method to get a valid input
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Podano nieprawidłową liczbę. Wprowadź liczbę całkowitą.");
+                    return GetShiftFromUser(); // Recursively call the method to get a valid input
+                }
             }
             catch (FormatException)
             {
                 MessageBox.Show("Podano nieprawidłową liczbę. Wprowadź liczbę całkowitą.");
+                return GetShiftFromUser(); // Recursively call the method to get a valid input
             }
 
             return shift;
         }
+
     }
 }
